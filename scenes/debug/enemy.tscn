@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxga0y1mkacxs"]
 
 [ext_resource type="PackedScene" uid="uid://dnsnqcshly5ek" path="res://shared/enemy/enemy.tscn" id="1_l7w7u"]
+[ext_resource type="PackedScene" uid="uid://coulty6lytj5" path="res://ui/pause_screen/pause_screen.tscn" id="2_dlhiu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lsxvw"]
 normal = Vector2(0, 5)
@@ -41,3 +42,5 @@ shape = SubResource("WorldBoundaryShape2D_lsxvw")
 position = Vector2(200, 400)
 rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_lsxvw")
+
+[node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("2_dlhiu")]
