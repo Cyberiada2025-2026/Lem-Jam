@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://botb3p1egyn5v"]
 
 [ext_resource type="Script" uid="uid://7klb4gwri63b" path="res://shared/consumables/consumable_test.gd" id="1_fxshs"]
+[ext_resource type="Texture2D" uid="uid://drvp4kq1jdqtn" path="res://shared/consumables/shadow.png" id="2_p4vnl"]
+[ext_resource type="Texture2D" uid="uid://bdm0d1g47q6kq" path="res://shared/consumables/health_vial.png" id="3_kl262"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pruad"]
 radius = 2.5
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fxshs"]
-size = Vector2(4, 4)
 
 [node name="ConsumableTest" type="Area2D" unique_id=541445871]
 script = ExtResource("1_fxshs")
@@ -15,6 +14,9 @@ script = ExtResource("1_fxshs")
 shape = SubResource("CircleShape2D_pruad")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=654976290]
-texture = SubResource("PlaceholderTexture2D_fxshs")
+texture = ExtResource("2_p4vnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=1005327646]
+texture = ExtResource("3_kl262")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
