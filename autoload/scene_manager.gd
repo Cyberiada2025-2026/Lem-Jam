@@ -1,5 +1,6 @@
 extends Node
 
+var can_execute:bool = true
 var current_scene = null
 var loading_scene = null
 var loading_screen = preload("uid://d3s2rrc1ef2r1")
@@ -10,7 +11,9 @@ func _ready():
 
 
 func goto_scene(path):
-	if current_scene:
+	print("LADOWANIE:" + str(current_scene))
+	if can_execute:
+		can_execute=false
 		_deferred_goto_scene.call_deferred(path)
 
 
@@ -29,3 +32,4 @@ func _deferred_goto_scene(path):
 	
 	loading_scene.queue_free()
 	get_tree().current_scene = current_scene	
+	can_execute=true
