@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c08otfsfonbqm"]
 
+[ext_resource type="Script" uid="uid://hcx0rif760n5" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
+
 [node name="MainMenu" type="Control" unique_id=165242488]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,49 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uhj5c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1713803984]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=738479846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1539393253]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1306511573]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=441584380]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=184957567]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+text = "Object Rejection"
+fit_content = true
+
+[node name="PlayButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=565568836]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Play
+"
+
+[node name="QuitButton" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=1193461057]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Quit"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
