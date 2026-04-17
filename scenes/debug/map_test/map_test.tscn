@@ -10,6 +10,7 @@ viewport_path = NodePath("Arena/NoiseSubViewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_36r5t"]
 shader = ExtResource("1_oealp")
+shader_parameter/Noise_position = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_oealp"]
 
