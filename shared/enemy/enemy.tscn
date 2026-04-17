@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_o71pq"]
 radius = 7.0
 
-[node name="Node2D" type="Node2D" unique_id=2121269621]
+[node name="Node2D2" type="Node2D" unique_id=2121269621]
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=161224150]
 platform_wall_layers = 1
