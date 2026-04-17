@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://bkxy8nrfyq4xl"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3wk8e"]
-size = Vector2(64, 64)
+[ext_resource type="Texture2D" uid="uid://c54qqobw635l" path="res://shared/debug/player/character-debug.png" id="1_msuog"]
+[ext_resource type="Texture2D" uid="uid://bmhrh30lgrt01" path="res://shared/debug/board/debug_board.png" id="2_oealp"]
 
 [node name="MapTest" type="Node2D" unique_id=1670179635]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=510824623]
-position = Vector2(264, 181)
-texture = SubResource("PlaceholderTexture2D_3wk8e")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1405594243]
+position = Vector2(333, 247)
+texture = ExtResource("1_msuog")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1375515530]
+z_index = -1
+position = Vector2(329, 240)
+texture = ExtResource("2_oealp")
