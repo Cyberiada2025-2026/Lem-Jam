@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bxga0y1mkacxs"]
+
+[ext_resource type="PackedScene" uid="uid://dnsnqcshly5ek" path="res://shared/enemy/enemy.tscn" id="1_l7w7u"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lsxvw"]
+normal = Vector2(0, 5)
+
+[node name="Enemy" type="Node2D" unique_id=1509278692]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1433508298]
+offset_right = 400.0
+offset_bottom = 400.0
+color = Color(1, 0.88235295, 1, 1)
+
+[node name="Node2D2" parent="." unique_id=2121269621 instance=ExtResource("1_l7w7u")]
+position = Vector2(341, 310)
+
+[node name="Node2D" parent="." unique_id=756416387 instance=ExtResource("1_l7w7u")]
+position = Vector2(276, 85)
+
+[node name="Node2D3" parent="." unique_id=1813386953 instance=ExtResource("1_l7w7u")]
+position = Vector2(95, 271)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1472932931]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=706090234]
+position = Vector2(0, 200)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_lsxvw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1129264869]
+position = Vector2(400, 200)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_lsxvw")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=436635918]
+position = Vector2(200, 0)
+shape = SubResource("WorldBoundaryShape2D_lsxvw")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=827886353]
+position = Vector2(200, 400)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_lsxvw")
