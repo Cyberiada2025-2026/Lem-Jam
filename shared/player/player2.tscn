@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://p6awvugvtsmp"]
+[gd_scene format=3 uid="uid://cfvfo7limj5jn"]
 
 [ext_resource type="Script" uid="uid://bw10b5svnvsbe" path="res://shared/player/player_control.gd" id="1_x7nyl"]
 [ext_resource type="Script" uid="uid://chm8d3dh7cq8v" path="res://shared/player/health_component.gd" id="2_n2gxi"]
 
-[sub_resource type="Gradient" id="Gradient_x7nyl"]
+[sub_resource type="Gradient" id="Gradient_2ya55"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_n2gxi"]
-gradient = SubResource("Gradient_x7nyl")
+gradient = SubResource("Gradient_2ya55")
 width = 16
 height = 16
 

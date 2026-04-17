@@ -23,5 +23,5 @@ func _process(delta: float) -> void:
 	if time > regeneration_speed:
 		time = 0
 		if health < max_health:
-			heal(10)
+			heal(1)
 	

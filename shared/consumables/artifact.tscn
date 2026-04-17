@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bi726fpbqmjqq"]
+
+[ext_resource type="Script" uid="uid://7klb4gwri63b" path="res://shared/consumables/consumable_test.gd" id="1_iak7o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pruad"]
+radius = 2.5
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fxshs"]
+size = Vector2(4, 4)
+
+[node name="Artifact" type="Area2D" unique_id=541445871]
+script = ExtResource("1_iak7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=955216403]
+shape = SubResource("CircleShape2D_pruad")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=654976290]
+texture = SubResource("PlaceholderTexture2D_fxshs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
