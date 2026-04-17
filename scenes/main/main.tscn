@@ -2,68 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dvtkyb4dv2wtg" path="res://scenes/main/main.gd" id="1_hujxm"]
 [ext_resource type="PackedScene" uid="uid://coulty6lytj5" path="res://ui/pause_screen/pause_screen.tscn" id="1_hyk8p"]
-[ext_resource type="PackedScene" uid="uid://dffkfxwxq8cov" path="res://shared/player/player.tscn" id="2_iuonh"]
-[ext_resource type="PackedScene" uid="uid://botb3p1egyn5v" path="res://shared/consumables/consumable_test.tscn" id="3_k2fmo"]
-[ext_resource type="PackedScene" uid="uid://bi726fpbqmjqq" path="res://shared/consumables/artifact.tscn" id="3_l3cfh"]
-[ext_resource type="Texture2D" uid="uid://chc1fjlrd51uh" path="res://scenes/arena/floor.png" id="5_6q06x"]
-[ext_resource type="PackedScene" uid="uid://dnsnqcshly5ek" path="res://shared/enemy/enemy.tscn" id="6_ow5a4"]
+[ext_resource type="PackedScene" uid="uid://bg1tghbfm0s50" path="res://scenes/arena/arena.tscn" id="4_l3cfh"]
 [ext_resource type="AudioStream" uid="uid://d3wymnrsu8wd2" path="res://shared/GoofinesLied.mp3" id="8_yyfjg"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ow5a4"]
-normal = Vector2(0, 5)
 
 [node name="Main" type="Node2D" unique_id=1586237799]
 script = ExtResource("1_hujxm")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744812692]
-position = Vector2(320, 240)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_6q06x")
-
 [node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
 mouse_filter = 1
-
-[node name="Player" parent="." unique_id=1228326605 instance=ExtResource("2_iuonh")]
-position = Vector2(155, 75)
-
-[node name="Artifact" parent="." unique_id=541445871 instance=ExtResource("3_l3cfh")]
-position = Vector2(262, 76)
-scale = Vector2(4, 4)
-
-[node name="Artifact2" parent="." unique_id=585494967 instance=ExtResource("3_l3cfh")]
-position = Vector2(320, 184)
-scale = Vector2(4, 4)
-
-[node name="ConsumableTest" parent="." unique_id=1172664578 instance=ExtResource("3_k2fmo")]
-position = Vector2(209, 131)
-scale = Vector2(4, 4)
-
-[node name="Enemy" parent="." unique_id=2121269621 instance=ExtResource("6_ow5a4")]
-position = Vector2(321, 298)
-scale = Vector2(0.8, 0.8)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1098605040]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=766305011]
-position = Vector2(126, 1)
-rotation = 4.712389
-shape = SubResource("WorldBoundaryShape2D_ow5a4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1204197690]
-position = Vector2(513, 3)
-rotation = 1.5707964
-shape = SubResource("WorldBoundaryShape2D_ow5a4")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=936330324]
-position = Vector2(-3, 46)
-shape = SubResource("WorldBoundaryShape2D_ow5a4")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=557039448]
-position = Vector2(0, 434)
-rotation = 3.1415927
-shape = SubResource("WorldBoundaryShape2D_ow5a4")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1390608119]
 stream = ExtResource("8_yyfjg")
 autoplay = true
 max_distance = 1800.0
+
+[node name="Arena" parent="." unique_id=751659660 instance=ExtResource("4_l3cfh")]
+position = Vector2(80, 0)
