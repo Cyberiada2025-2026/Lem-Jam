@@ -7,14 +7,19 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r5ry"]
 radius = 17.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1228326605 node_paths=PackedStringArray("health_component") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1228326605 node_paths=PackedStringArray("health_component", "visual") groups=["player"]]
 script = ExtResource("1_x7nyl")
 health_component = NodePath("HealthComponent")
+visual = NodePath("VisualChar")
 
 [node name="HealthComponent" type="Node" parent="." unique_id=1542842994]
 script = ExtResource("2_n2gxi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2026787320]
+visible = false
+texture = ExtResource("3_7r5ry")
+
+[node name="VisualChar" type="Sprite2D" parent="." unique_id=141157484]
 texture = ExtResource("3_7r5ry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950972294]
