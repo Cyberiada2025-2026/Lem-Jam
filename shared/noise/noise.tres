@@ -11,9 +11,15 @@ input_name = "uv"
 default_input_values = [0, Vector2(0, 0), 1, Vector2(0, 0)]
 op_type = 0
 
-[sub_resource type="VisualShaderNodeVec2Parameter" id="VisualShaderNodeVec2Parameter_32dd0"]
-parameter_name = "Noise_position"
-default_value_enabled = true
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_32dd0"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_wwujr"]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_gmiub"]
+default_input_values = [0, 0.01, 1, 0.0]
+operator = 2
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_32dd0"]
 
@@ -52,6 +58,10 @@ nodes/fragment/11/node = SubResource("VisualShaderNodeInput_wwujr")
 nodes/fragment/11/position = Vector2(-900, -140)
 nodes/fragment/12/node = SubResource("VisualShaderNodeVectorOp_gmiub")
 nodes/fragment/12/position = Vector2(-580, -20)
-nodes/fragment/13/node = SubResource("VisualShaderNodeVec2Parameter_32dd0")
-nodes/fragment/13/position = Vector2(-920, 60)
-nodes/fragment/connections = PackedInt32Array(4, 0, 6, 0, 6, 0, 0, 0, 7, 0, 4, 1, 6, 0, 0, 1, 2, 0, 4, 0, 10, 0, 2, 0, 11, 0, 12, 0, 12, 0, 10, 0, 13, 0, 12, 1)
+nodes/fragment/14/node = SubResource("VisualShaderNodeInput_32dd0")
+nodes/fragment/14/position = Vector2(-1580, -40)
+nodes/fragment/15/node = SubResource("VisualShaderNodeVectorCompose_wwujr")
+nodes/fragment/15/position = Vector2(-868.61774, 69.607735)
+nodes/fragment/16/node = SubResource("VisualShaderNodeFloatOp_gmiub")
+nodes/fragment/16/position = Vector2(-1180, -100)
+nodes/fragment/connections = PackedInt32Array(4, 0, 6, 0, 6, 0, 0, 0, 7, 0, 4, 1, 6, 0, 0, 1, 2, 0, 4, 0, 10, 0, 2, 0, 11, 0, 12, 0, 12, 0, 10, 0, 14, 0, 16, 1, 16, 0, 15, 0, 16, 0, 15, 1, 15, 0, 12, 1)
