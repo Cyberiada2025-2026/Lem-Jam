@@ -83,8 +83,8 @@ mouse_filter = 1
 
 [node name="Hud" parent="." unique_id=803827322 instance=ExtResource("5_6q06x")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=850428526]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1442265227]
 offset = Vector2(320, 240)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1689127329]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1282709699]
 libraries/ = SubResource("AnimationLibrary_6q06x")
