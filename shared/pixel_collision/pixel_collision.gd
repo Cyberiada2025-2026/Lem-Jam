@@ -4,12 +4,20 @@ extends Node
 @export var noise: Sprite2D
 @export var character: Sprite2D
 
+func check_overlap() -> bool:
+	var size = character.get_rect().size
+	var img = noise.texture.get_image()
+	
+	for y in size.y:
+		for x in size.x:
+			var pixel = img.get_pixelv(character.position + character.get_rect().position + Vector2(x, y))
+			if pixel == Color.WHITE && character.is_pixel_opaque(character.get_rect().position + Vector2(x, y)):
+				return true
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+	return false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(_delta: float) -> void:
+	if check_overlap():
+		print("Damage!")
+	else:
+		print("Safe!")
