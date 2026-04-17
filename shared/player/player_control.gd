@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Player
 var time: float = 0
 var score: int = 0
+var angle_control: float = 0.3
 @export var speed = 200
 @export var health_component: HealthComponent
 var selected = false
@@ -26,7 +27,7 @@ func _process(delta: float) -> void:
 	time += delta
 	if selected == true:
 		var dir = position.direction_to(get_global_mouse_position())
-		if abs(dir.normalized().x) > 0.2 and abs(dir.normalized().y) > 0.2:
+		if abs(dir.normalized().x) > angle_control and abs(dir.normalized().y) > angle_control:
 			can_be_detected = true
 		else:
 			can_be_detected = false
