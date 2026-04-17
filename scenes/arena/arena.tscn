@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg1tghbfm0s50"]
 
 [ext_resource type="Texture2D" uid="uid://chc1fjlrd51uh" path="res://scenes/arena/floor.png" id="1_1qjuf"]
+[ext_resource type="Script" uid="uid://cx5vwpwbdjqs0" path="res://scenes/arena/arena.gd" id="1_ii07k"]
 [ext_resource type="PackedScene" uid="uid://dffkfxwxq8cov" path="res://shared/player/player.tscn" id="2_asdgj"]
 [ext_resource type="PackedScene" uid="uid://bi726fpbqmjqq" path="res://shared/consumables/artifact.tscn" id="3_jx0ua"]
 [ext_resource type="PackedScene" uid="uid://botb3p1egyn5v" path="res://shared/consumables/consumable_test.tscn" id="4_u52cf"]
@@ -25,6 +26,7 @@ width = 480
 height = 480
 
 [node name="Arena" type="Node2D" unique_id=751659660]
+script = ExtResource("1_ii07k")
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=561154567]
 texture = ExtResource("1_1qjuf")
