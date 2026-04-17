@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var max_collisions := 6
 var current_direction = "None"
 var directions = ["Up", "Down", "Left", "Right"]
 var canItMove:Array[bool] = [true, true, true, true]
@@ -43,3 +44,14 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(_body: Node) -> void:
 	print("error") # Replace with function body.
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Player:
+		if body.can_be_detected == true:
+			body.health_component.takeDamage(300)
+
+
+func _on_close_damage_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.health_component.takeDamage(300)

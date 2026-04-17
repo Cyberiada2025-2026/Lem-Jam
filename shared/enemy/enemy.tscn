@@ -6,6 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_o71pq"]
 radius = 7.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_881n6"]
+radius = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hsrat"]
+radius = 32.01562
+
 [node name="Node2D2" type="Node2D" unique_id=2121269621]
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=161224150]
@@ -19,3 +25,16 @@ texture = ExtResource("2_881n6")
 scale = Vector2(3.5, 3.5)
 shape = SubResource("CircleShape2D_o71pq")
 debug_color = Color(0.6961502, 0.43339655, 0.6349445, 0.41960785)
+
+[node name="DetectionArea" type="Area2D" parent="Enemy" unique_id=1216786097]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/DetectionArea" unique_id=1000703707]
+shape = SubResource("CircleShape2D_881n6")
+
+[node name="CloseDamageArea" type="Area2D" parent="Enemy" unique_id=737037889]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/CloseDamageArea" unique_id=554029822]
+shape = SubResource("CircleShape2D_hsrat")
+
+[connection signal="body_entered" from="Enemy/DetectionArea" to="Enemy" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Enemy/CloseDamageArea" to="Enemy" method="_on_close_damage_body_entered"]
