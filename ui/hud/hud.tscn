@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8ht37n4xt0mi" path="res://ui/hud/hud.gd" id="1_4d6w6"]
 [ext_resource type="Texture2D" uid="uid://dltlj31ly3xco" path="res://ui/hud/hud.png" id="1_xmswo"]
+[ext_resource type="Texture2D" uid="uid://de5m81f1qdsq1" path="res://scenes/arena/left_background.png" id="2_e0nub"]
 
 [node name="Hud" type="Control" unique_id=803827322]
 layout_mode = 3
@@ -10,25 +11,23 @@ offset_right = 160.0
 offset_bottom = 480.0
 script = ExtResource("1_4d6w6")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1268830258]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.71462876, 0.7146292, 0.7146289, 1)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=165835040]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_e0nub")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2022293993]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Control" type="Control" parent="VBoxContainer" unique_id=30706324]
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
 [node name="Control2" type="Control" parent="VBoxContainer" unique_id=1839938968]
