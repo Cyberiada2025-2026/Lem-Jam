@@ -2,13 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bw10b5svnvsbe" path="res://shared/player/player_control.gd" id="1_x7nyl"]
 [ext_resource type="Script" uid="uid://chm8d3dh7cq8v" path="res://shared/player/health_component.gd" id="2_n2gxi"]
-
-[sub_resource type="Gradient" id="Gradient_x7nyl"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ejjm8"]
-gradient = SubResource("Gradient_x7nyl")
-width = 32
-height = 32
+[ext_resource type="Texture2D" uid="uid://cjnfwfk64fkr6" path="res://shared/player/player.png" id="3_7r5ry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r5ry"]
 radius = 17.0
@@ -21,7 +15,7 @@ health_component = NodePath("HealthComponent")
 script = ExtResource("2_n2gxi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2026787320]
-texture = SubResource("GradientTexture2D_ejjm8")
+texture = ExtResource("3_7r5ry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950972294]
 shape = SubResource("CircleShape2D_7r5ry")
