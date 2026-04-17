@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://c4skvt0380saw"]
+
+[ext_resource type="Script" uid="uid://b4clw4yj4j7oe" path="res://ui/prologue/prologue.gd" id="1_x0701"]
+
+[node name="Prologue" type="Control" unique_id=787346208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x0701")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=451908575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=804305968]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -110.0
+offset_right = 300.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 35
+text = "Raport nadzwyczajny
+Miejsce: Stacja badawcza Pobliż"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect" unique_id=2072378250]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -260.0
+offset_right = 300.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 26
+text = "Rano wybuchł strajk robotów. Podejrzewamy, 
+że był on wywołany przez złośliwe 
+oprogramowanie z zewnątrz. Jestem obecnie 
+jedyną żyjącą istotą na całej stacji."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="ColorRect" unique_id=1448959360]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -260.0
+offset_right = 300.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 26
+text = "Moi współpracownicy uciekli zanim wszystkie 
+wyjścia zostały zamknięte i są już daleko od 
+stacji, albo zostali zabici przez roboty. 
+Większość z nich udało nam się wyłączyć, 
+nawet za cenę życia, ale część dalej się kręci po 
+stacji."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="ColorRect" unique_id=928255943]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -260.0
+offset_right = 300.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 26
+text = "Wezwaliśmy już dawno pomoc i ktoś powinien 
+wkrótce po mnie przybyć ale do tego czasu 
+muszę się ukryć. Na szczęście na tym 
+terminalu, na którym piszę ten raport, 
+znalazłem mapę."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="ColorRect" unique_id=848292362]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -260.0
+offset_right = 300.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 26
+text = "Widać na niej pomieszczenie w którym mogę 
+się zamknąć i powinienem być bezpieczny. 
+Muszę tylko uważać, aby nie zwrócić za dużej 
+uwagi na siebie w nim, by nikt mnie tam nie 
+wykrył...
+"
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
