@@ -36,15 +36,12 @@ position = Vector2(32, 32)
 
 [node name="Artifact" parent="." unique_id=541445871 instance=ExtResource("3_jx0ua")]
 position = Vector2(174, 37)
-scale = Vector2(4, 4)
 
 [node name="Artifact2" parent="." unique_id=1750943230 instance=ExtResource("3_jx0ua")]
 position = Vector2(238, 171)
-scale = Vector2(4, 4)
 
 [node name="ConsumableTest" parent="." unique_id=440075285 instance=ExtResource("4_u52cf")]
 position = Vector2(104, 104)
-scale = Vector2(4, 4)
 
 [node name="Enemy" parent="." unique_id=2121269621 instance=ExtResource("5_ii07k")]
 position = Vector2(240, 310)
