@@ -47,6 +47,14 @@ position = Vector2(104, 104)
 position = Vector2(240, 310)
 scale = Vector2(0.8, 0.8)
 
+[node name="Enemy2" parent="." unique_id=1639769237 instance=ExtResource("5_ii07k")]
+position = Vector2(347, 66.000015)
+scale = Vector2(0.8, 0.8)
+
+[node name="Enemy3" parent="." unique_id=1558809060 instance=ExtResource("5_ii07k")]
+position = Vector2(64, 418)
+scale = Vector2(0.8, 0.8)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=326779856]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946648249]
