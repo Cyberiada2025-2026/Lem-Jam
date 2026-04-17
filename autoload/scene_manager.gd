@@ -10,7 +10,8 @@ func _ready():
 
 
 func goto_scene(path):
-	_deferred_goto_scene.call_deferred(path)
+	if current_scene:
+		_deferred_goto_scene.call_deferred(path)
 
 
 func _deferred_goto_scene(path):
