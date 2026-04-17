@@ -13,6 +13,7 @@ offset_bottom = 480.0
 script = ExtResource("1_yfpbd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=703735644]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
