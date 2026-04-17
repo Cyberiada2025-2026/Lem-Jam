@@ -13,7 +13,6 @@ offset_bottom = 480.0
 script = ExtResource("1_yfpbd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=703735644]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,6 +25,7 @@ offset_right = 250.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.07444572, 0.07444573, 0.07444573, 1)
 
 [node name="Container" type="Control" parent="ColorRect" unique_id=925789750]
 layout_mode = 1
@@ -51,7 +51,6 @@ offset_right = 100.0
 offset_bottom = 40.0
 grow_horizontal = 2
 size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0.14622876, 0.14622876, 0.14622873, 1)
 theme_override_font_sizes/normal_font_size = 26
 text = "Game paused"
 horizontal_alignment = 1

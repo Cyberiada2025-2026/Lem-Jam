@@ -8,13 +8,14 @@ var max_read_time = 10
 var cur_page = 0
 
 func get_next_text():
-	text.visible=false
+	text.get_parent().visible=false
 	cur_page += 1
-	if cur_page == 5:
-		get_tree().quit()
+	if cur_page == 6:
+		SceneManager.goto_scene("res://scenes/main/main.tscn")
 	else:
-		text = get_child(0).get_child(cur_page)
+		text = get_child(0).get_child(cur_page).get_child(1)
 	current_time = 0
+	text.get_parent().visible=true
 
 func _input(event):
 	if event is InputEventKey and event.pressed:
@@ -24,7 +25,7 @@ func _input(event):
 			get_next_text()
 
 func _ready() -> void:
-	text = get_child(0).get_child(0)
+	text = get_child(0).get_child(0).get_child(0)
 	
 func _process(delta: float) -> void:
 	if cur_page == 0:
