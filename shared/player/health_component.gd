@@ -15,11 +15,13 @@ func takeDamage(damage: int) -> void:
 	if health <= 0:
 		get_parent().queue_free()
 	
+func heal(amount: int) -> void:
+	health = max(health, health+amount)
 
 func _process(delta: float) -> void:
 	time += delta
 	if time > regeneration_speed:
 		time = 0
 		if health < max_health:
-			takeDamage(10)
+			heal(10)
 	
