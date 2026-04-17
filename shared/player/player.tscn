@@ -7,10 +7,11 @@
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ejjm8"]
 gradient = SubResource("Gradient_x7nyl")
-width = 16
-height = 16
+width = 32
+height = 32
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r5ry"]
+radius = 17.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1228326605 node_paths=PackedStringArray("health_component")]
 script = ExtResource("1_x7nyl")

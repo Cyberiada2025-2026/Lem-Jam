@@ -24,7 +24,6 @@ func _on_character_input_event(viewport: Node, event: InputEvent, shape_idx: int
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time += delta
-	print("Time:", time)
 	if selected == true:
 		var dir = position.direction_to(get_global_mouse_position())
 		if abs(dir.normalized().x) > 0.2 and abs(dir.normalized().y) > 0.2:
