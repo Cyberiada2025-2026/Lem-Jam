@@ -80,11 +80,11 @@ position = Vector2(160, 0)
 
 [node name="Hud" parent="." unique_id=803827322 instance=ExtResource("5_6q06x")]
 
-[node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
-mouse_filter = 1
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1442265227]
 offset = Vector2(320, 240)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1282709699]
 libraries/ = SubResource("AnimationLibrary_6q06x")
+
+[node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
+mouse_filter = 1
