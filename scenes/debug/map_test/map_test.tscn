@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bkxy8nrfyq4xl"]
+
+[ext_resource type="Texture2D" uid="uid://c54qqobw635l" path="res://shared/debug/player/character-debug.png" id="1_msuog"]
+[ext_resource type="Shader" uid="uid://bbwij44bjd7dj" path="res://shared/noise/noise.tres" id="1_oealp"]
+[ext_resource type="Texture2D" uid="uid://bmhrh30lgrt01" path="res://shared/debug/board/debug_board.png" id="2_oealp"]
+[ext_resource type="Script" uid="uid://bakxoo25hvn6c" path="res://shared/pixel_collision/pixel_collision.gd" id="4_36r5t"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oealp"]
+viewport_path = NodePath("Arena/NoiseSubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_36r5t"]
+shader = ExtResource("1_oealp")
+
+[sub_resource type="Gradient" id="Gradient_oealp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_36r5t"]
+gradient = SubResource("Gradient_oealp")
+width = 480
+height = 480
+
+[node name="MapTest" type="Node2D" unique_id=1670179635]
+
+[node name="Arena" type="Node2D" parent="." unique_id=1591346053]
+position = Vector2(80, 0)
+
+[node name="Character" type="Sprite2D" parent="Arena" unique_id=1405594243]
+position = Vector2(220, 220)
+texture = ExtResource("1_msuog")
+centered = false
+
+[node name="Background" type="Sprite2D" parent="Arena" unique_id=1375515530]
+z_index = -1
+texture = ExtResource("2_oealp")
+centered = false
+
+[node name="Noise" type="Sprite2D" parent="Arena" unique_id=2003703053]
+texture = SubResource("ViewportTexture_oealp")
+centered = false
+
+[node name="NoiseSubViewport" type="SubViewport" parent="Arena" unique_id=1679419172]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(480, 480)
+
+[node name="NoiseTexture" type="Sprite2D" parent="Arena/NoiseSubViewport" unique_id=1691225463]
+z_index = 1
+material = SubResource("ShaderMaterial_36r5t")
+texture = SubResource("GradientTexture2D_36r5t")
+centered = false
+
+[node name="PixelCollision" type="Node" parent="." unique_id=1583487187 node_paths=PackedStringArray("noise", "character")]
+script = ExtResource("4_36r5t")
+noise = NodePath("../Arena/Noise")
+character = NodePath("../Arena/Character")
+metadata/_custom_type_script = "uid://bakxoo25hvn6c"
