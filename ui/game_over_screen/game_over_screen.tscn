@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b54yu2bnl3fs"]
 
+[ext_resource type="Script" uid="uid://bbvixng2xp08f" path="res://ui/win_screen/win_screen.gd" id="1_bkcqb"]
+
 [node name="GameOverScreen" type="Control" unique_id=996445304]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,89 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bkcqb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=448303708]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+
+[node name="Control" type="Control" parent="ColorRect" unique_id=1468471518]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Control" unique_id=602291843]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "You lost :("
+fit_content = true
+horizontal_alignment = 1
+justification_flags = 162
+
+[node name="Control" type="Control" parent="ColorRect/Control" unique_id=1920957513]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -150.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayButton" type="Button" parent="ColorRect/Control/Control" unique_id=11885770]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Go back to menu
+"
+
+[node name="QuitButton" type="Button" parent="ColorRect/Control/Control" unique_id=116957750]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+text = "Quit"
+
+[node name="Button" type="Button" parent="ColorRect/Control/Control" unique_id=1406166094]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Play again"
+
+[connection signal="pressed" from="ColorRect/Control/Control/PlayButton" to="." method="on_main_menu_button"]
+[connection signal="pressed" from="ColorRect/Control/Control/QuitButton" to="." method="on_quit_button"]
+[connection signal="pressed" from="ColorRect/Control/Control/Button" to="." method="on_play_again_button"]

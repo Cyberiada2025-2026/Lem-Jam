@@ -12,7 +12,7 @@ func unpause_game():
 	get_child(0).visible = false
 	get_tree().paused = false
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		if game_pause:
 			unpause_game()
