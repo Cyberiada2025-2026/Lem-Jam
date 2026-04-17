@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://coulty6lytj5"]
 
 [ext_resource type="Script" uid="uid://w71shtk56qfw" path="res://ui/pause_screen/pause_screen.gd" id="1_yfpbd"]
+[ext_resource type="Theme" uid="uid://bsjlnia300yv7" path="res://ui/button_texture/button_texture.tres" id="2_bupvi"]
 
 [node name="PauseScreen" type="Control" unique_id=870774568]
 process_mode = 3
@@ -75,6 +76,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
+theme = ExtResource("2_bupvi")
 text = "return"
 
 [node name="Button2" type="Button" parent="ColorRect/Container/Control" unique_id=458222226]
@@ -86,6 +88,7 @@ anchor_bottom = 1.0
 offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("2_bupvi")
 text = "quit
 "
 

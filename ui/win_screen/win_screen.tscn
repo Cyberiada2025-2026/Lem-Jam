@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxvaf06yql48s"]
 
 [ext_resource type="Script" uid="uid://bbvixng2xp08f" path="res://ui/win_screen/win_screen.gd" id="1_vii5q"]
+[ext_resource type="Theme" uid="uid://bsjlnia300yv7" path="res://ui/button_texture/button_texture.tres" id="2_dcw1d"]
 
 [node name="WinScreen" type="Control" unique_id=116378872]
 layout_mode = 3
@@ -62,9 +63,10 @@ grow_vertical = 0
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 31.0
+offset_bottom = 40.0
 grow_horizontal = 2
 size_flags_horizontal = 0
+theme = ExtResource("2_dcw1d")
 text = "Go back to menu
 "
 
@@ -75,9 +77,11 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -31.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 0
+theme = ExtResource("2_dcw1d")
 text = "Quit"
 
 [connection signal="pressed" from="ColorRect/Control/Control/PlayButton" to="." method="on_main_menu_button"]

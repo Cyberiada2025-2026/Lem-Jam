@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b54yu2bnl3fs"]
 
 [ext_resource type="Script" uid="uid://bbvixng2xp08f" path="res://ui/win_screen/win_screen.gd" id="1_bkcqb"]
+[ext_resource type="Theme" uid="uid://bsjlnia300yv7" path="res://ui/button_texture/button_texture.tres" id="2_oh0l1"]
 
 [node name="GameOverScreen" type="Control" unique_id=996445304]
 layout_mode = 3
@@ -69,6 +70,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
+theme = ExtResource("2_oh0l1")
 text = "Go back to menu
 "
 
@@ -82,6 +84,7 @@ offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 0
+theme = ExtResource("2_oh0l1")
 text = "Quit"
 
 [node name="Button" type="Button" parent="ColorRect/Control/Control" unique_id=1406166094]
@@ -90,6 +93,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
+theme = ExtResource("2_oh0l1")
 text = "Play again"
 
 [connection signal="pressed" from="ColorRect/Control/Control/PlayButton" to="." method="on_main_menu_button"]
