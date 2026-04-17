@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dnsnqcshly5ek"]
 
-[ext_resource type="Texture2D" uid="uid://camcp1impam8q" path="res://shared/enemy/placeholder.png" id="1_5dg63"]
 [ext_resource type="Script" uid="uid://cy7kwyu2ngqcn" path="res://shared/enemy/enemy.gd" id="1_881n6"]
+[ext_resource type="Texture2D" uid="uid://brcpkdf4inm8i" path="res://shared/enemy/roomba.png" id="2_881n6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o71pq"]
+radius = 7.0
 
 [node name="Node2D" type="Node2D" unique_id=2121269621]
 
@@ -12,7 +13,7 @@ platform_wall_layers = 1
 script = ExtResource("1_881n6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=691345916]
-texture = ExtResource("1_5dg63")
+texture = ExtResource("2_881n6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1991579710]
 scale = Vector2(3.5, 3.5)
