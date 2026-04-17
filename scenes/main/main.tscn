@@ -1,7 +1,22 @@
-[gd_scene format=3 uid="uid://dxxe5d14gjlvc"]
+[gd_scene format=3 uid="uid://cltepgmfe84m0"]
 
 [ext_resource type="PackedScene" uid="uid://coulty6lytj5" path="res://ui/pause_screen/pause_screen.tscn" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://dffkfxwxq8cov" path="res://shared/player/player.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://botb3p1egyn5v" path="res://shared/consumables/consumable_test.tscn" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://bi726fpbqmjqq" path="res://shared/consumables/artifact.tscn" id="3_l3cfh"]
 
 [node name="Main" type="Node2D" unique_id=1586237799]
 
 [node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
+
+[node name="Player" parent="." unique_id=1228326605 instance=ExtResource("2_iuonh")]
+position = Vector2(148, 66)
+
+[node name="Artifact" parent="." unique_id=541445871 instance=ExtResource("3_l3cfh")]
+position = Vector2(255, 104)
+
+[node name="Artifact2" parent="." unique_id=585494967 instance=ExtResource("3_l3cfh")]
+position = Vector2(301, 177)
+
+[node name="ConsumableTest" parent="." unique_id=1172664578 instance=ExtResource("3_k2fmo")]
+position = Vector2(75, 159)
