@@ -6,6 +6,67 @@
 [ext_resource type="PackedScene" uid="uid://d2u0etcuqlm6i" path="res://ui/hud/hud.tscn" id="5_6q06x"]
 [ext_resource type="AudioStream" uid="uid://d3wymnrsu8wd2" path="res://shared/GoofinesLied.mp3" id="8_yyfjg"]
 
+[sub_resource type="Animation" id="Animation_l3cfh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6q06x"]
+resource_name = "camera_shake"
+length = 0.30860415
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.08667918, 0.13732064, 0.18886158, 0.23221599, 0.2781907),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(8, -12), Vector2(12, 10), Vector2(-11, 10), Vector2(2, -8), Vector2(2, 16), Vector2(-29, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.08667918, 0.13732064, 0.18886158, 0.23221599, 0.2781907),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow5a4"]
+_data = {
+&"RESET": SubResource("Animation_l3cfh"),
+&"camera_shake": SubResource("Animation_6q06x")
+}
+
 [node name="Main" type="Node2D" unique_id=1586237799]
 script = ExtResource("1_hujxm")
 
