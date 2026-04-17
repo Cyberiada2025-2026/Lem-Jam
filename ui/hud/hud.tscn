@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2u0etcuqlm6i"]
 
 [ext_resource type="Script" uid="uid://c8ht37n4xt0mi" path="res://ui/hud/hud.gd" id="1_4d6w6"]
-[ext_resource type="Texture2D" uid="uid://dltlj31ly3xco" path="res://ui/hud/hud.png" id="1_xmswo"]
+[ext_resource type="Texture2D" uid="uid://cl25458u4o218" path="res://ui/hud/hud.png" id="1_xmswo"]
 [ext_resource type="Texture2D" uid="uid://de5m81f1qdsq1" path="res://scenes/arena/left_background.png" id="2_e0nub"]
 
 [node name="Hud" type="Control" unique_id=803827322]
