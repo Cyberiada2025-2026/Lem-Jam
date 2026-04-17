@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dnsnqcshly5ek"]
+
+[ext_resource type="Texture2D" uid="uid://camcp1impam8q" path="res://shared/enemy/placeholder.png" id="1_5dg63"]
+[ext_resource type="Script" uid="uid://cy7kwyu2ngqcn" path="res://shared/enemy/enemy.gd" id="1_881n6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o71pq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_881n6"]
+
+[sub_resource type="GDScript" id="GDScript_881n6"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_body_entered(body: Node) -> void:
+	print(\"arr\") # Replace with function body.
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_881n6"]
+size = Vector2(648, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsrat"]
+size = Vector2(648, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pcp6"]
+size = Vector2(1152, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bm6bf"]
+size = Vector2(1152, 20)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_881n6"]
+normal = Vector2(0, -10)
+
+[node name="Node2D" type="Node2D" unique_id=2121269621]
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=161224150]
+position = Vector2(50, 350)
+platform_wall_layers = 1
+script = ExtResource("1_881n6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=691345916]
+texture = ExtResource("1_5dg63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1991579710]
+scale = Vector2(3.5, 3.5)
+shape = SubResource("CircleShape2D_o71pq")
+debug_color = Color(0.6961502, 0.43339655, 0.6349445, 0.41960785)
+
+[node name="border3" type="StaticBody2D" parent="." unique_id=591764945]
+visible = false
+physics_material_override = SubResource("PhysicsMaterial_881n6")
+script = SubResource("GDScript_881n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border3" unique_id=2099734570]
+position = Vector2(-10, 324)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_881n6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="border3" unique_id=1347059690]
+position = Vector2(1162, 324)
+rotation = 4.712389
+shape = SubResource("RectangleShape2D_hsrat")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border3" unique_id=915343077]
+position = Vector2(576, 658)
+shape = SubResource("RectangleShape2D_0pcp6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border3" unique_id=1359509605]
+position = Vector2(576, -10)
+rotation = 3.1415927
+shape = SubResource("RectangleShape2D_bm6bf")
+
+[node name="border2" type="StaticBody2D" parent="." unique_id=7121160]
+physics_material_override = SubResource("PhysicsMaterial_881n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border2" unique_id=618656648]
+position = Vector2(0, 324)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_881n6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="border2" unique_id=1256205849]
+position = Vector2(1152, 324)
+rotation = 4.712389
+shape = SubResource("WorldBoundaryShape2D_881n6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border2" unique_id=1298321142]
+position = Vector2(576, 648)
+shape = SubResource("WorldBoundaryShape2D_881n6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border2" unique_id=393856038]
+position = Vector2(576, 0)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_881n6")
