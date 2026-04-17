@@ -13,7 +13,7 @@ height = 32
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r5ry"]
 radius = 17.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1228326605 node_paths=PackedStringArray("health_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1228326605 node_paths=PackedStringArray("health_component") groups=["player"]]
 script = ExtResource("1_x7nyl")
 health_component = NodePath("HealthComponent")
 

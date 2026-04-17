@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://d2u0etcuqlm6i"]
+
+[ext_resource type="Script" uid="uid://c8ht37n4xt0mi" path="res://ui/hud/hud.gd" id="1_4d6w6"]
+[ext_resource type="Texture2D" uid="uid://dltlj31ly3xco" path="res://ui/hud/hud.png" id="1_xmswo"]
+
+[node name="Hud" type="Control" unique_id=803827322]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 160.0
+offset_bottom = 480.0
+script = ExtResource("1_4d6w6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2022293993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=30706324]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=1839938968]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control2" unique_id=634509196]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -35.0
+offset_right = 58.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xmswo")
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Control2/TextureRect" unique_id=214691472]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -8.0
+offset_right = 50.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8573845, 0.31651437, 0.39286664, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Control2" unique_id=939348120]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = -5.0
+offset_right = 50.0
+offset_bottom = 35.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.48, 0.48766667, 0.5, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Health"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Control3" type="Control" parent="VBoxContainer" unique_id=268837258]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/Control3" unique_id=1510754866]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_right = 60.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/Control3/Control" unique_id=1231003909]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.48, 0.48766667, 0.5, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Score:"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer/Control3/Control" unique_id=2072980335]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.48, 0.48766667, 0.5, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "000"
+fit_content = true
+
+[node name="Control4" type="Control" parent="VBoxContainer" unique_id=839663079]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/Control4" unique_id=692192867]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -60.0
+offset_right = 60.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/Control4/Control" unique_id=158580970]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0.48, 0.48766667, 0.5, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "Time:"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer/Control4/Control" unique_id=341563631]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.48, 0.48766667, 0.5, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "000"
+fit_content = true
