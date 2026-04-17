@@ -1,13 +1,17 @@
 extends Node
 
 var game_pause = false
+var mouse_position:Vector2
 
 func pause_game():
+	mouse_position = get_viewport().get_mouse_position()
+	get_viewport().warp_mouse(Vector2(320,240))
 	game_pause = true
 	get_child(0).visible = true
 	get_tree().paused = true
 	
 func unpause_game():
+	get_viewport().warp_mouse(mouse_position)
 	game_pause = false
 	get_child(0).visible = false
 	get_tree().paused = false
