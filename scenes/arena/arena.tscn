@@ -36,6 +36,50 @@ gradient = SubResource("Gradient_oealp")
 width = 480
 height = 480
 
+[sub_resource type="Gradient" id="Gradient_u52cf"]
+offsets = PackedFloat32Array(0, 0.70481926)
+colors = PackedColorArray(1, 1, 0.8509804, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ii07k"]
+gradient = SubResource("Gradient_u52cf")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_6w4xk"]
+offsets = PackedFloat32Array(0, 0.70481926)
+colors = PackedColorArray(1, 1, 0.6862745, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2ml6w"]
+gradient = SubResource("Gradient_6w4xk")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_xgbxb"]
+offsets = PackedFloat32Array(0, 0.70481926)
+colors = PackedColorArray(1, 0.9411765, 0.61960787, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vmsrg"]
+gradient = SubResource("Gradient_xgbxb")
+width = 220
+height = 220
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_s83md"]
+offsets = PackedFloat32Array(0, 0.70481926)
+colors = PackedColorArray(0.83137256, 1, 0.8509804, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fv88w"]
+gradient = SubResource("Gradient_s83md")
+width = 300
+height = 300
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Arena" type="Node2D" unique_id=751659660]
 script = ExtResource("1_ii07k")
 
@@ -113,3 +157,31 @@ centered = false
 [node name="PixelCollision" type="Node" parent="." unique_id=611367936]
 script = ExtResource("6_u52cf")
 metadata/_custom_type_script = "uid://bakxoo25hvn6c"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2034789549]
+visible = false
+offset_right = 480.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.28627452)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=602147025]
+color = Color(0.8431839, 0.8431839, 0.84318376, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=915822000]
+z_index = 1
+position = Vector2(357, 339)
+texture = SubResource("GradientTexture2D_ii07k")
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=181839075]
+position = Vector2(129, 375)
+texture = SubResource("GradientTexture2D_2ml6w")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1254528590]
+position = Vector2(337, 102)
+texture = SubResource("GradientTexture2D_vmsrg")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1827019536]
+position = Vector2(154, 156)
+texture = SubResource("GradientTexture2D_fv88w")
