@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var max_collisions := 6
+@export var visual: Sprite2D
 var current_direction = "None"
 var directions = ["Up", "Down", "Left", "Right"]
 var canItMove:Array[bool] = [true, true, true, true]
@@ -27,6 +27,7 @@ func choose_direction(sameOrNot: bool):
 			velocity=Vector2(-speed, 0.0)
 		"Right":
 			velocity=Vector2(speed, 0.0)
+	visual.rotation = velocity.angle() + PI+PI/2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
