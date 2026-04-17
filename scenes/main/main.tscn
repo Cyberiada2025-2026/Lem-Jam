@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dxxe5d14gjlvc"]
+[gd_scene format=3 uid="uid://cltepgmfe84m0"]
 
 [ext_resource type="Script" uid="uid://dvtkyb4dv2wtg" path="res://scenes/main/main.gd" id="1_hujxm"]
 [ext_resource type="PackedScene" uid="uid://coulty6lytj5" path="res://ui/pause_screen/pause_screen.tscn" id="1_hyk8p"]
@@ -61,7 +61,7 @@ tracks/1/keys = {
 "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow5a4"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6q06x"]
 _data = {
 &"RESET": SubResource("Animation_l3cfh"),
 &"camera_shake": SubResource("Animation_6q06x")
@@ -82,3 +82,9 @@ position = Vector2(160, 0)
 mouse_filter = 1
 
 [node name="Hud" parent="." unique_id=803827322 instance=ExtResource("5_6q06x")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=850428526]
+offset = Vector2(320, 240)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1689127329]
+libraries/ = SubResource("AnimationLibrary_6q06x")
