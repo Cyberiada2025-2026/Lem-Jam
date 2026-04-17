@@ -26,14 +26,14 @@ func _on_character_input_event(viewport: Node, event: InputEvent, shape_idx: int
 func _process(delta: float) -> void:
 	time += delta
 	if selected == true:
-		var dir = position.direction_to(get_global_mouse_position())
+		var dir = global_position.direction_to(get_global_mouse_position())
 		if abs(dir.normalized().x) > angle_control and abs(dir.normalized().y) > angle_control:
 			can_be_detected = true
 		else:
 			can_be_detected = false
 			
 		velocity = speed * dir.normalized()
-		if position.distance_squared_to(get_global_mouse_position()) > 10:
+		if global_position.distance_squared_to(get_global_mouse_position()) > 10:
 			move_and_slide()
 		else:
 			can_be_detected = false
