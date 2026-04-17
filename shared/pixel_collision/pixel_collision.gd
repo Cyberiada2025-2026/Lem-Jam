@@ -12,10 +12,11 @@ func check_overlap() -> bool:
 	var img = noise.texture.get_image()
 
 	var center = rect.size / 2
-	
+
 	for y in size.y:
 		for x in size.x:
-			var pixel = img.get_pixelv($%Player.position - center + Vector2(x, y))
+			var pos = ($%Player.position - center + Vector2(x, y)).clamp(Vector2.ZERO, Vector2(480, 480))
+			var pixel = img.get_pixelv(pos)
 			if pixel == Color.WHITE && character.is_pixel_opaque(rect.position + Vector2(x, y)):
 				return true
 
