@@ -24,3 +24,6 @@ func _process(delta: float) -> void:
 		move_and_slide()
 	else:
 		can_be_detected = false
+
+	if time > 60.0:
+		SceneManager.goto_scene("ui/win_screen/win_screen.tscn")
