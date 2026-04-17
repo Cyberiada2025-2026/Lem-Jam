@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dn0sgejdn3pf1"]
+[gd_scene format=3 uid="uid://p6awvugvtsmp"]
 
 [ext_resource type="Script" uid="uid://bw10b5svnvsbe" path="res://shared/player/player_control.gd" id="1_x7nyl"]
 [ext_resource type="Script" uid="uid://chm8d3dh7cq8v" path="res://shared/player/health_component.gd" id="2_n2gxi"]
@@ -12,17 +12,15 @@ height = 16
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_efxag"]
 
-[node name="Node2D" type="Node2D" unique_id=455582693]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=803124353 node_paths=PackedStringArray("health_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1994603944 node_paths=PackedStringArray("health_component")]
 script = ExtResource("1_x7nyl")
 health_component = NodePath("HealthComponent")
 
-[node name="HealthComponent" type="Node" parent="CharacterBody2D" unique_id=1046180454]
+[node name="HealthComponent" type="Node" parent="." unique_id=974640576]
 script = ExtResource("2_n2gxi")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=53822598]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=684292285]
 texture = SubResource("GradientTexture2D_n2gxi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=994362472]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=436603174]
 shape = SubResource("CircleShape2D_efxag")

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Lem Game Jam"
+run/main_scene="uid://c08otfsfonbqm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneManager="*uid://bahfskek4vde6"
 
 [display]
 
