@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cltepgmfe84m0"]
+[gd_scene format=3 uid="uid://dxxe5d14gjlvc"]
 
 [ext_resource type="Script" uid="uid://dvtkyb4dv2wtg" path="res://scenes/main/main.gd" id="1_hujxm"]
 [ext_resource type="PackedScene" uid="uid://coulty6lytj5" path="res://ui/pause_screen/pause_screen.tscn" id="1_hyk8p"]
@@ -78,10 +78,10 @@ max_distance = 1800.0
 [node name="Arena" parent="." unique_id=751659660 instance=ExtResource("4_l3cfh")]
 position = Vector2(160, 0)
 
+[node name="Hud" parent="." unique_id=803827322 instance=ExtResource("5_6q06x")]
+
 [node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
 mouse_filter = 1
-
-[node name="Hud" parent="." unique_id=803827322 instance=ExtResource("5_6q06x")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1442265227]
 offset = Vector2(320, 240)
