@@ -13,7 +13,7 @@ func _ready() -> void:
 func takeDamage(damage: float) -> void:
 	health -= damage
 	if health <= 0.0:
-		get_parent().queue_free()
+		SceneManager.goto_scene("res://ui/game_over_screen/game_over_screen.tscn")
 
 
 func heal(amount: float) -> void:
