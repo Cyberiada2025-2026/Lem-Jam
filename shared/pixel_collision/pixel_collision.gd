@@ -1,6 +1,9 @@
 class_name PixelCollision
 extends Node
 
+@export var noise: Sprite2D
+@export var character: Sprite2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
