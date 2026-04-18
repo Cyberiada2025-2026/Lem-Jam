@@ -87,4 +87,5 @@ offset = Vector2(320, 240)
 libraries/ = SubResource("AnimationLibrary_6q06x")
 
 [node name="PauseScreen" parent="." unique_id=870774568 instance=ExtResource("1_hyk8p")]
+z_index = 10
 mouse_filter = 1
