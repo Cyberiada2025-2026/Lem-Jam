@@ -37,8 +37,8 @@ func add_enemies() -> void:
 	var enemy_data = ResourceLoader.load(ENEMY_PATH)
 	var aoc = rng.randi_range(1,5 )
 	for i in aoc:
-		var x = rng.randi_range(30, 450)
-		var y = rng.randi_range(30, 450)
+		var x = rng.randi_range(200, 450)
+		var y = rng.randi_range(200, 450)
 		var enemy = enemy_data.instantiate()
 		add_child(enemy)
 		enemy.owner = get_tree().edited_scene_root
@@ -47,7 +47,7 @@ func add_enemies() -> void:
 	
 
 func _ready():
-	
+	get_viewport().warp_mouse(Vector2(192,32))
 	add_consumables()
 	add_enemies()
 	
