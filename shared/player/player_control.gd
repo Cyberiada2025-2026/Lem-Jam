@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 var time: float = 0
 var score: int = 0
-var angle_control: float = 0.01
+var angle_control: float = 0.03
 @export var speed = 200
 @export var health_component: HealthComponent
 @export var visual: Sprite2D

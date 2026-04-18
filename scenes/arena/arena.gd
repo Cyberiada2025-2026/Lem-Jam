@@ -20,7 +20,7 @@ func add_consumables() -> void:
 		artifact.position = Vector2(x,y)
 		
 		
-	var aoc = rng.randi_range(1, 10)
+	var aoc = rng.randi_range(3, 10)
 	for i in aoc:
 		var x = rng.randi_range(30, 450)
 		var y = rng.randi_range(30, 450)
@@ -35,10 +35,10 @@ func add_consumables() -> void:
 func add_enemies() -> void:
 	var ENEMY_PATH = "res://shared/enemy/enemy.tscn"
 	var enemy_data = ResourceLoader.load(ENEMY_PATH)
-	var aoc = rng.randi_range(1,5 )
+	var aoc = rng.randi_range(3,4 )
 	for i in aoc:
-		var x = rng.randi_range(200, 450)
-		var y = rng.randi_range(200, 450)
+		var x = rng.randi_range(175, 450)
+		var y = rng.randi_range(175, 450)
 		var enemy = enemy_data.instantiate()
 		add_child(enemy)
 		enemy.owner = get_tree().edited_scene_root
@@ -46,9 +46,9 @@ func add_enemies() -> void:
 	
 	
 
-func _ready():
-	get_viewport().warp_mouse(Vector2(192,32))
+func _ready():	
 	add_consumables()
+	await get_tree().create_timer(7).timeout
 	add_enemies()
 	
 	

@@ -82,7 +82,7 @@ centered = false
 
 [node name="Player" parent="." unique_id=1228326605 instance=ExtResource("2_asdgj")]
 unique_name_in_owner = true
-position = Vector2(32, 32)
+position = Vector2(236, 238)
 
 [node name="Artifact" parent="." unique_id=541445871 instance=ExtResource("3_jx0ua")]
 position = Vector2(174, 37)
@@ -94,7 +94,7 @@ position = Vector2(238, 171)
 position = Vector2(104, 104)
 
 [node name="Enemy" parent="." unique_id=2121269621 instance=ExtResource("5_ii07k")]
-position = Vector2(240, 310)
+position = Vector2(441, 448)
 scale = Vector2(0.8, 0.8)
 
 [node name="Enemy3" parent="." unique_id=1558809060 instance=ExtResource("5_ii07k")]

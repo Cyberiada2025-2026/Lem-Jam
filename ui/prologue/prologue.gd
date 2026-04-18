@@ -18,7 +18,8 @@ func get_next_text():
 	text.get_parent().visible=true
 
 func _input(event):
-	if event is InputEventKey and event.pressed:
+	if (event is InputEventKey and event.pressed) \
+	or (event is InputEventMouseButton and event.is_action_pressed("select_player")):
 		if text.visible_ratio > 0.0 and text.visible_ratio < 1.0:
 			text.visible_ratio = 1.0
 		else:
